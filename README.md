@@ -1,4 +1,4 @@
-#Alexa Skill: Energy-Product-Finder
+# Alexa Skill: Energy-Product-Finder
 
 ## Inspiration
 We need to find energy efficient electrical product to save energy and reduce the electricity consumption.
