@@ -1,0 +1,38 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Transform": "AWS::Serverless-2016-10-31",
+ 
+  "Resources": {	
+    "EnergyProductFinder": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "energy_product_finder.handler",
+        "Runtime": "python3.6",
+        "CodeUri": "s3://sjalexaskillsvirginea/Code/energy_finder.zip",        
+        "MemorySize": 128,
+        "Timeout": 100,
+        "Policies": [
+          {
+            "SNSPublishMessagePolicy": {
+              "TopicName": { "Fn::GetAtt" : [ "SNSTopic", "TopicName" ] }
+            }
+          },
+          {
+            "SNSCrudPolicy": {
+              "TopicName": { "Fn::GetAtt" : [ "SNSTopic", "TopicName" ] }
+            }
+          },
+		  {
+		    "RekognitionDetectOnlyPolicy":{}	  
+		  }		 
+		],		       
+        "Events": {
+          "AlexaSkillEvent": {
+            "Type": "AlexaSkill"
+            }
+          }
+        }
+      }
+    }    
+    
+}

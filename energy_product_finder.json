@@ -1,0 +1,443 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "energy product finder",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "FindLightBulbIntent",
+                    "slots": [
+                        {
+                            "name": "Technology",
+                            "type": "TechnologyType",
+                            "samples": [
+                                "Find {Technology} Type ",
+                                "{Technology} Type"
+                            ]
+                        },
+                        {
+                            "name": "Power",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{Power}",
+                                "{Power} Watt"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Find Bulb",
+                        "find Light Bulb of {Technology} Type",
+                        "Find Light Bulb",
+                        "Find info for Light Bulb of type {Technology} and power forty {Power}",
+                        "Find Light Bulb of  {Power} Watt"
+                    ]
+                },
+                {
+                    "name": "FindFanIntent",
+                    "slots": [
+                        {
+                            "name": "Fan_Power",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "Get fan for {Fan_Power} watt",
+                                "{Fan_Power}",
+                                "Fan of {Fan_Power} watt",
+                                "{Fan_Power} watt"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Get Ceiling Fan",
+                        "Find Fan"
+                    ]
+                },
+                {
+                    "name": "FindFridgeIntent",
+                    "slots": [
+                        {
+                            "name": "Freezer_Location",
+                            "type": "FreezerLocationType",
+                            "samples": [
+                                "It is on {Freezer_Location}",
+                                "{Freezer_Location}",
+                                "take {Freezer_Location}",
+                                "On {Freezer_Location}"
+                            ]
+                        },
+                        {
+                            "name": "Capacity",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "take {Capacity}",
+                                "it is {Capacity}",
+                                "{Capacity}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Find Top Freezer Refrigerators of capacity five",
+                        "Refrigerators of capacity twelve with Top Freezer",
+                        "Find Refrigerators with Top Freezer and of capacity  ten ",
+                        "Find Refrigerators with Side Freezer",
+                        "Find Fridge have Bottom Freezer",
+                        "Find Refrigerators with Top Freezer",
+                        "Find Refrigerators",
+                        "Find Fridge "
+                    ]
+                },
+                {
+                    "name": "FindACIntent",
+                    "slots": [
+                        {
+                            "name": "AC_Type",
+                            "type": "ACTypeSlotType",
+                            "samples": [
+                                "Get {AC_Type} Type",
+                                "Find {AC_Type} AC",
+                                "It is {AC_Type} AC",
+                                "Through The {AC_Type}",
+                                "{AC_Type} AC",
+                                "Wall",
+                                "Window",
+                                "I want Waindow AC"
+                            ]
+                        },
+                        {
+                            "name": "AC_Capacity",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "find for {AC_Capacity}",
+                                "it is {AC_Capacity}",
+                                "{AC_Capacity}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Air Conditioners of capacity hundred btu per hour",
+                        "Wall AC with capacity of twoo hundres",
+                        "Window AC of Capacity",
+                        "Air Conditioners of capacity ",
+                        "Air Conditioners of Window Type",
+                        "Find Window Air Conditione",
+                        "Find Window AC ",
+                        "Find AC",
+                        "Find Air Conditioners"
+                    ]
+                },
+                {
+                    "name": "AMAZON.PauseIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ResumeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "TechnologyType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "LED"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "CFL"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "BrandType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Philips"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bazz"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "FanLightType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Standard fan"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Light"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "With Light"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Standard"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "FanType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "No Idea"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "outdoor"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "FreezerLocationType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Compact"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "None"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bottom"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Top"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Side"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ACTypeSlotType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Through The Wall"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wall"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Window"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "FindLightBulbIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Technology",
+                            "type": "TechnologyType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-FindLightBulbIntent.IntentSlot-Technology"
+                            }
+                        },
+                        {
+                            "name": "Power",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1214142979479.337246480917"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "FindFanIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Fan_Power",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.551516737633.107782735818"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "FindFridgeIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Freezer_Location",
+                            "type": "FreezerLocationType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.395253416860.329097310978"
+                            }
+                        },
+                        {
+                            "name": "Capacity",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.395253416860.539823051032"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "FindACIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "AC_Type",
+                            "type": "ACTypeSlotType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1500093224292.251431531581"
+                            }
+                        },
+                        {
+                            "name": "AC_Capacity",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1500093224292.258631171935"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Intent-FindLightBulbIntent.IntentSlot-Technology",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the type of Bulb, CFL or LED?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1214142979479.337246480917",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Tell me the power of Bulb"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "How much is the power of Bulb"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Plesae tell the power of Bulb"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.551516737633.107782735818",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please tell Input Power You can say Fifty watt"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.395253416860.539823051032",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Tell Capacity in Cubic feet, between one to thirty"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.395253416860.329097310978",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Tell Location of Freezer, side, top, bottom or None"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1500093224292.251431531581",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Tell AC Type Window or Wall"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1500093224292.258631171935",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Tell AC Cooling Capacity in BTU Per Hour"
+                    }
+                ]
+            }
+        ]
+    }
+}
